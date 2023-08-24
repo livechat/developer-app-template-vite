@@ -2,12 +2,12 @@ import { Route } from "wouter";
 import "./App.css";
 
 import LivechatCustomerDetails from "./pages/Livechat/ChatDetails";
-import LivechatFullScreen from "./pages/Livechat/FullScreen";
+import LivechatFullScreen from "./pages/Livechat/Fullscreen";
 import LivechatMessageBox from "./pages/Livechat/MessageBox";
 import LivechatAppSettings from "./pages/Livechat/AppSettings";
 
 import HelpdeskTicketDetails from "./pages/Helpdesk/TicketDetails";
-import HelpdeskFullScreen from "./pages/Helpdesk/FullScreen";
+import HelpdeskFullScreen from "./pages/Helpdesk/Fullscreen";
 import HelpdeskSettings from "./pages/Helpdesk/AppSettings";
 
 import AppRoute from "./routes";

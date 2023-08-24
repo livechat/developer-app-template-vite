@@ -33,5 +33,6 @@ npm create vite@latest
 > React
 > Typescript
 
+npm i @vitejs/plugin-basic-ssl
 npm i wouter @livechat/agent-app-sdk @livechat/design-system @livechat/developer-sdk @livechat/helpdesk-sdk
 npm i --save-dev @livechat/developer-cli

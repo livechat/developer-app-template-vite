@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react'
-import { createMessageBoxWidget, IMessageBoxWidget } from '@livechat/agent-app-sdk'
+import { useEffect, useState } from "react";
+import {
+  createMessageBoxWidget,
+  IMessageBoxWidget,
+} from "@livechat/agent-app-sdk";
 
 function useLiveChatMessageBoxWidget(): IMessageBoxWidget | null {
-  const [widget, setWidget] = useState<IMessageBoxWidget | null>(null)
+  const [widget, setWidget] = useState<IMessageBoxWidget | null>(null);
 
   useEffect(() => {
-    createMessageBoxWidget().then(setWidget)
-  }, [])
+    createMessageBoxWidget().then(setWidget);
+  }, []);
 
-  return widget
+  return widget;
 }
 
-export default useLiveChatMessageBoxWidget
+export default useLiveChatMessageBoxWidget;
