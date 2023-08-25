@@ -1,14 +1,14 @@
 import { Route } from "wouter";
 import "./App.css";
 
-import LivechatCustomerDetails from "./pages/Livechat/ChatDetails";
-import LivechatFullScreen from "./pages/Livechat/Fullscreen";
+import LivechatChatDetails from "./pages/Livechat/ChatDetails";
+import LivechatFullscreen from "./pages/Livechat/Fullscreen";
 import LivechatMessageBox from "./pages/Livechat/MessageBox";
 import LivechatAppSettings from "./pages/Livechat/AppSettings";
 
 import HelpdeskTicketDetails from "./pages/Helpdesk/TicketDetails";
-import HelpdeskFullScreen from "./pages/Helpdesk/Fullscreen";
-import HelpdeskSettings from "./pages/Helpdesk/AppSettings";
+import HelpdeskFullscreen from "./pages/Helpdesk/Fullscreen";
+import HelpdeskAppSettings from "./pages/Helpdesk/AppSettings";
 
 import AppRoute from "./routes";
 
@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <Route
-        path={AppRoute.LivechatCustomerDetails}
-        component={LivechatCustomerDetails}
+        path={AppRoute.LivechatChatDetails}
+        component={LivechatChatDetails}
       />
       <Route
         path={AppRoute.LivechatMessageBox}
@@ -25,9 +25,12 @@ function App() {
       />
       <Route
         path={AppRoute.LivechatFullscreen}
-        component={LivechatFullScreen}
+        component={LivechatFullscreen}
       />
-      <Route path={AppRoute.LivechatSettings} component={LivechatAppSettings} />
+      <Route
+        path={AppRoute.LivechatAppSettings}
+        component={LivechatAppSettings}
+      />
 
       <Route
         path={AppRoute.HelpDeskTicketDetails}
@@ -35,9 +38,12 @@ function App() {
       />
       <Route
         path={AppRoute.HelpDeskFullscreen}
-        component={HelpdeskFullScreen}
+        component={HelpdeskFullscreen}
       />
-      <Route path={AppRoute.HelpDeskSettings} component={HelpdeskSettings} />
+      <Route
+        path={AppRoute.HelpDeskAppSettings}
+        component={HelpdeskAppSettings}
+      />
     </div>
   );
 }
