@@ -10,9 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@livechat/agent-app-sdk": "^1.6.4",
+    "@livechat/agent-app-sdk": "^1.6.5",
     "@livechat/design-system": "^0.13.5",
-    "@livechat/developer-sdk": "^1.2.103",
+    "@livechat/developer-sdk": "^1.3.0",
     "@livechat/helpdesk-sdk": "^1.0.3",
     "@vitejs/plugin-basic-ssl": "^1.0.1",
     "react": "^18.2.0",
