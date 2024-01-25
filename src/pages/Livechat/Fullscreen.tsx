@@ -25,7 +25,7 @@ function LiveChatFullscreen() {
   }, [fullscreenWidget, notificationsCount]);
 
   useEffect(() => {
-    if (developerApp) {
+    if (developerApp?.authorization?.data) {
       fetch(
         `${developerApp.urls.liveChatApi}/configuration/action/list_agents`,
         {
@@ -33,14 +33,18 @@ function LiveChatFullscreen() {
           body: "{}",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `${developerApp.authorization?.data?.token_type} ${developerApp.authorization?.data?.access_token}`,
+            Authorization: `${developerApp.authorization.data.token_type} ${developerApp.authorization.data.access_token}`,
           },
         }
       )
         .then(async (response) => {
+          const data = await response.json();
+
           if (response.ok) {
-            return await response.json()
+            return data
           }
+
+          await developerApp.features.reporting.sendError("4xx", `Problem with agent list request [${data.error?.message ?? response.status}]`)
 
           return []
         })
