@@ -37,8 +37,14 @@ function HelpDeskFullscreen() {
           },
         }
       )
-        .then((response) => response.json())
-        .then(setAgents);
+        .then(async (response) => {
+          if (response.ok) {
+            return await response.json()
+          }
+
+          return []
+        })
+        .then(setAgents)
     }
   }, [developerApp]);
 
