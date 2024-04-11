@@ -12,7 +12,7 @@
   "dependencies": {
     "@livechat/agent-app-sdk": "^1.6.5",
     "@livechat/design-system": "^0.13.5",
-    "@livechat/developer-sdk": "^1.4.3",
+    "@livechat/developer-sdk": "^2.0.0",
     "@livechat/helpdesk-sdk": "^1.0.3",
     "@livechat/moments-sdk": "^1.8.2",
     "@vitejs/plugin-basic-ssl": "^1.0.1",
@@ -21,7 +21,7 @@
     "wouter": "^2.11.0"
   },
   "devDependencies": {
-    "@livechat/developer-cli": "^1.2.164",
+    "@livechat/developer-cli": "^2.0.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

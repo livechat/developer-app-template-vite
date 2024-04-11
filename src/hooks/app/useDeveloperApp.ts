@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react'
-import { DeveloperApp, DeveloperAppConfig } from '@livechat/developer-sdk'
-import lcConfig from '../../../livechat.config.json'
+import { useEffect, useState } from "react";
+import { DeveloperApp, DeveloperAppConfig } from "@livechat/developer-sdk";
+import lcConfig from "../../../livechat.config.json";
 
-const config = lcConfig as DeveloperAppConfig
+const config = lcConfig as unknown as DeveloperAppConfig;
 
 function useDeveloperApp() {
-  const [developerApp, setDeveloperApp] = useState<DeveloperApp | null>(null)
+  const [developerApp, setDeveloperApp] = useState<DeveloperApp | null>(null);
 
   useEffect(() => {
-    const app = DeveloperApp.init(config)
+    const app = DeveloperApp.init(config);
 
-    if (config.auth?.clientId) {
-      app.authorize().then(() => setDeveloperApp(app))
+    if (config.blocks?.authorization) {
+      app.authorize().then(() => setDeveloperApp(app));
     } else {
-      setDeveloperApp(app)
+      setDeveloperApp(app);
     }
-  }, [])
+  }, []);
 
-  return developerApp
+  return developerApp;
 }
 
-export default useDeveloperApp
+export default useDeveloperApp;
