@@ -1,38 +1,60 @@
-# React + TypeScript + Vite
+# <img src="https://platform.labs.text.com/console/favicon.ico" widht="24px" height="24px" /> Text Platform Developer App - Vite Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> This Vite template bootstraps your [Developer Console](https://platform.text.com/console) application with a predefined configuration and a sample [LiveChat APIs](https://platform.text.com/docs) code.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First, ensure that Text Platform Developer CLI is installed:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```sh
+npm i -g @livechat/developer-cli
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then, install dependecies:
 
-## Recreate
+```sh
+npm install
+```
 
-npm create vite@latest
+Next, pull app manifest:
 
-> React
-> Typescript
+```sh
+txdev app pull
+```
 
-npm i @vitejs/plugin-basic-ssl
-npm i wouter @livechat/agent-app-sdk @livechat/design-system @livechat/developer-sdk @livechat/helpdesk-sdk
-npm i --save-dev @livechat/developer-cli
+Now, you can open your [Developer Console](https://platform.text.com/console) app:
+
+```sh
+txdev app open
+```
+
+or go to the [Developer Console](https://platform.text.com/console) and see your newly created app in action!
+
+To start local development server, run:
+
+```sh
+npm run dev
+```
+
+## ⚙️ Available Scripts
+
+### `dev`
+
+Runs the app in the development mode.
+Open url from to view it in your browser.
+The page will reload when you make changes.
+You may also see any lint errors in the console.
+
+### `build`
+
+Builds the app for production to the `dist` folder.
+
+## 🧑‍💻 [Text Platform](https://platform.text.com/): who are we?
+
+Behind [Text](https://www.text.com/), there’s a [team of passionate people](https://www.text.com/team/) building online customer service software with online chat, help desk software, chatbot, and web analytics capabilities.
+
+With a suite of five products ([LiveChat](https://www.livechat.com), [ChatBot](https://chatbot.com/), [HelpDesk](https://helpdesk.com/), [KnowledgeBase](https://www.knowledgebase.com/), and [OpenWidget](https://openwidget.com/)) and their powerful APIs, we power customer communication for 36,000 companies in 150 countries.
+
+[The Platform](https://platform.text.com/) is a range of products and services that can be used to build a variety of communication tools for businesses. Our [Developer Program](https://platform.text.com/developer-program) and [Marketplace](https://www.livechat.com/marketplace/) create an open ecosystem for developers, partners, and customers. With our [advanced APIs](https://platform.text.com/) and comprehensive [documentation](https://platform.text.com/docs), you can shape the future of communication with us — starting today.
+
+[Join our Discord](https://discord.com/invite/NcfJu3a9kM) to learn, get inspired, and meet other developers!
