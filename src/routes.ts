@@ -1,11 +1,11 @@
 enum AppRoute {
   LivechatMessageBox = "/livechat/message-box",
-  LivechatChatDetails = "/livechat/chat-details",
+  LivechatChatDetails = "/livechat/details",
   LivechatFullscreen = "/livechat/fullscreen",
-  LivechatAppSettings = "/livechat/app-settings",
-  HelpDeskTicketDetails = "/helpdesk/ticket-details",
+  LivechatAppSettings = "/livechat/settings",
+  HelpDeskTicketDetails = "/helpdesk/details",
   HelpDeskFullscreen = "/helpdesk/fullscreen",
-  HelpDeskAppSettings = "/helpdesk/app-settings",
+  HelpDeskAppSettings = "/helpdesk/settings",
 }
 
 export default AppRoute;

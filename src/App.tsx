@@ -1,20 +1,25 @@
 import { Route } from "wouter";
-import "./App.css";
-
-import LivechatChatDetails from "./pages/Livechat/ChatDetails";
-import LivechatFullscreen from "./pages/Livechat/Fullscreen";
-import LivechatMessageBox from "./pages/Livechat/MessageBox";
-import LivechatAppSettings from "./pages/Livechat/AppSettings";
-
-import HelpdeskTicketDetails from "./pages/Helpdesk/TicketDetails";
-import HelpdeskFullscreen from "./pages/Helpdesk/Fullscreen";
-import HelpdeskAppSettings from "./pages/Helpdesk/AppSettings";
+import { AppConfig } from "@livechat/developer-sdk";
+import { AppProvider } from "@livechat/developer-ui-react";
 
 import AppRoute from "./routes";
 
+import LivechatChatDetails from "./pages/Livechat/Widgets/Details/Page";
+import LivechatFullscreen from "./pages/Livechat/Widgets/Fullscreen/Page";
+import LivechatMessageBox from "./pages/Livechat/Widgets/MessageBox/Page";
+import LivechatAppSettings from "./pages/Livechat/Widgets/Settings/Page";
+
+import HelpdeskTicketDetails from "./pages/Helpdesk/Details/Page";
+import HelpdeskFullscreen from "./pages/Helpdesk/Fullscreen/Page";
+import HelpdeskAppSettings from "./pages/Helpdesk/Settings/Page";
+
+import config from "./../livechat.config.json";
+
+import "./App.css";
+
 function App() {
   return (
-    <div className="App">
+    <AppProvider config={config as unknown as AppConfig}>
       <Route
         path={AppRoute.LivechatChatDetails}
         component={LivechatChatDetails}
@@ -44,7 +49,7 @@ function App() {
         path={AppRoute.HelpDeskAppSettings}
         component={HelpdeskAppSettings}
       />
-    </div>
+    </AppProvider>
   );
 }
 

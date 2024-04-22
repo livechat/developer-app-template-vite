@@ -1,6 +1,5 @@
-import ViewContainer from "../../../components/ViewContainer";
-import createMomentsSDK, { MomentsSDK } from "@livechat/moments-sdk";
 import { useEffect, useState } from "react";
+import createMomentsSDK, { MomentsSDK } from "@livechat/moments-sdk";
 
 function LiveChatTestMoment() {
   const [moment, setMoment] = useState<MomentsSDK>();
@@ -16,7 +15,7 @@ function LiveChatTestMoment() {
   }, []);
 
   return (
-    <ViewContainer>
+    <div>
       <h1>Test moment</h1>
       <button
         onClick={() => {
@@ -37,7 +36,7 @@ function LiveChatTestMoment() {
       >
         Send message back and close
       </button>
-    </ViewContainer>
+    </div>
   );
 }
 
